@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom';
 
 import Menu from '../component/Menu';
 
-import logo from '../image/logo.png'
+import logo from '../image/logo.png';
 
 const HeaderStyle = styled.div`
     display: inline-flex;
     align-items: center;
+    position : fixed;
+    z-index:2;
 `;
 
 const LogoStyle = styled.img`

@@ -8,6 +8,7 @@ const MenuStyle = styled.div`
     .menu{
         padding-inline-start: 10px;
     };
+    font-size : 1vw;
 `;
 
 const ListStyle = styled.li`
