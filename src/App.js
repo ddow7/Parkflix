@@ -7,12 +7,11 @@ import Menu1 from './container/Menu1'
 import Header from './component/Header'
 import Footer from './component/Footer';
 
+//전체 스타일(배경)
 const GlobalStyle = createGlobalStyle`
   body {
     background: #000000;
-  }
-  p{
-    color : white;
+    overflow-x:hidden;
   }
 `;
 

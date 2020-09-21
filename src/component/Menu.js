@@ -1,7 +1,10 @@
+//메뉴(리스트)
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+//메뉴 스타일
 const MenuStyle = styled.div`
     display: inline-block;
     padding-inline-start: 0px;
@@ -11,6 +14,7 @@ const MenuStyle = styled.div`
     font-size : 1vw;
 `;
 
+//메뉴 리스트 스타일(각 메뉴버튼)
 const ListStyle = styled.li`
     list-style:none;
     display: inline-block;
