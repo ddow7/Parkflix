@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import { Link, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
-import movie from '../image/movie/Bee.mp4';
+import movie from '../image/movie/mainMovie.mp4';
 import ImageList from '../component/MainList';
 
 // 메인 스타일
