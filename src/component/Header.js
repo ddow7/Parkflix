@@ -13,7 +13,7 @@ const HeaderStyle = styled.div`
     display: inline-flex;
     align-items: center;
     position : fixed;
-    z-index:3;
+    z-index:10;
 `;
 
 //로고 스타일
