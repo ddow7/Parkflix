@@ -21,7 +21,7 @@ const ShadowTopStyle = styled.div`
     width : 100%;
     height : 100%;
     position : absolute;
-    box-shadow:inset 0 30px 40px rgba(0, 0, 0, 1);
+    box-shadow:inset 0 30px 40px #121212;
     z-index:1;
 `;
 
@@ -30,7 +30,7 @@ const ShadowBotStyle = styled.div`
     width : 100%;
     height : 100%;
     position : absolute;
-    box-shadow:inset 0 -50px 40px rgba(0, 0, 0, 1);
+    box-shadow:inset 0 -150px 100px #121212;
     z-index:1;
 `;
 

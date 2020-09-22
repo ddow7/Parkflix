@@ -29,11 +29,43 @@ const ThumbHoverStyle = styled.div`
     position : absolute;
     width : 22vw;
     height : 22vw;
-    background-color:white;
+    background-color:#151515;
     display:none;
-    transition: all ease 1s;
+    transition: all ease 0.5s;
+    opacity : 0;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0vw 0vw 1vw 0.1vw #000000;
+
+    img{
+        width : 21vw;
+        margin : 0.5vw;
+        opacit:2;
+    }
+
+    p.title{
+        color : white;
+        font-size : 1.5vw;
+        text-align: center;
+        margin-block-start: 0vw;
+        margin-block-end: 0em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+
+    p.description{
+        color : white;
+        font-size : 1vw;
+        text-align: center;
+        margin-block-start: 0vw;
+        margin-block-end: 0em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+
     &:hover{
         transform: scale( 1.2 );
+        opacity: 1;
     }
 `;
 
@@ -63,7 +95,7 @@ const ThumbCoverStyle = styled.div`
 `;
 
 //썸네일 스타일
-const ThumbStyle = styled.img`
+const ThumbStyle = styled.div`
     z-index :2;
     position : relative;
     width : 22vw;
@@ -71,6 +103,10 @@ const ThumbStyle = styled.img`
     margin : 0.5vw;
     border-radius: 3px;
     display: inline-flex;
+    overflow: hidden;
+    img{
+        width : 22vw;
+    }
 `;
 
 //이미지 출력 함수
@@ -79,10 +115,14 @@ function Image({image}){
         <>
             <ThumbPosStyle>
                 <ThumbCoverStyle>
-                    <ThumbHoverStyle />
+                    <ThumbHoverStyle>
+                        <img src={image.src} alt={image.name} />
+                        <p class="title">{image.name}</p>
+                        <p class="description">{image.description}</p>
+                    </ThumbHoverStyle>
                 </ThumbCoverStyle>
             </ThumbPosStyle>
-            <ThumbStyle src={image.src} alt={image.name} />
+            <ThumbStyle><img src={image.src} alt={image.name} /></ThumbStyle>
         </>
     );
 }

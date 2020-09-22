@@ -10,7 +10,7 @@ import Footer from './component/Footer';
 //전체 스타일(배경)
 const GlobalStyle = createGlobalStyle`
   body {
-    background: #000000;
+    background: #121212;
     overflow-x:hidden;
   }
 `;
