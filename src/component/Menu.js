@@ -36,16 +36,10 @@ function Menu(){
                 <Link to="/">홈</Link>
             </ListStyle>
             <ListStyle>
-                <Link to="/menu">TV프로그램</Link>
+                <Link to="/image">사진</Link>
             </ListStyle>
             <ListStyle>
-                <Link to="/menu">영화</Link>
-            </ListStyle>
-            <ListStyle>
-                <Link to="/menu">최신 콘텐츠</Link>
-            </ListStyle>
-            <ListStyle>
-                <Link to="/menu">내가 찜한 콘텐츠</Link>
+                <Link to="/movie">동영상</Link>
             </ListStyle>
         </ul>
     </MenuStyle>

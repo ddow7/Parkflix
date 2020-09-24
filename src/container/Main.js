@@ -5,7 +5,7 @@ import { Link, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
 import movie from '../image/movie/mainMovie.mp4';
-import ImageList from '../component/MainList';
+import ImageList from '../component/ImageList';
 
 // 메인 스타일
 const MainStyle = styled.div`
@@ -45,9 +45,9 @@ class Main extends Component{
                         <source src={movie} type="video/mp4" />
                     </video>
                 </MainStyle>
-                <ImageList numb="1" title="메뉴1"/>
-                <ImageList title="메뉴2"/>
-                <ImageList numb="1" title="메뉴3"/>
+                <ImageList numb="1" title="애기 상혁"/>
+                <ImageList numb="2" title="셀카 상혁"/>
+                <ImageList numb="3" title="웃겨 상혁"/>
             </>
         )
     }

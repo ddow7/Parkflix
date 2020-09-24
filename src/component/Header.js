@@ -18,8 +18,8 @@ const HeaderStyle = styled.div`
 
 //로고 스타일
 const LogoStyle = styled.img`
-    margin: 10px;
-    width: 150px;
+    margin: 2vw;
+    width: 12vw;
 `;
 
 function Header(){
