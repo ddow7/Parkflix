@@ -159,28 +159,30 @@ function Image({image}){
 //이미지 리스트 리턴
 function ImageList({numb, title}){
 
+    let images = imageAll[Number(numb)-1];
+
+    let pageMax = images.length / 4;
+
     const [page, setPage] = useState(1);
 
     const listInput = useRef();
 
     const leftPage = () => {
-        if(page != 1){
+        if(page !== 1){
             setPage(page-1);
         }
-        console.log(page);
     }
 
     const rightPage = () => {
-        setPage(page+1);
-        console.log(page);
+        if(page < pageMax){
+            setPage(page+1);
+        };
     }
-
-    let images = imageAll[Number(numb)-1];
     
     return (
         <>
             <TitleStyle>{title}</TitleStyle>
-            <ThumbListStyle id={numb} page={page} ref={listInput}>
+            <ThumbListStyle page={page} ref={listInput}>
             <LeftSlideButtonStyle onClick={leftPage}></LeftSlideButtonStyle>
             <RightSlideButtonStyle onClick={rightPage}></RightSlideButtonStyle>
                 {

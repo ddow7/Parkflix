@@ -21,9 +21,6 @@ class Main extends Component{
                 <ImageList numb="1" title="애기 상혁"/>
                 <ImageList numb="2" title="셀카 상혁"/>
                 <ImageList numb="3" title="웃겨 상혁"/>
-                <ImageList numb="1" title="애기 상혁"/>
-                <ImageList numb="2" title="셀카 상혁"/>
-                <ImageList numb="3" title="웃겨 상혁"/>
             </>
         )
     }

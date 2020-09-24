@@ -4,6 +4,7 @@ import { createGlobalStyle } from 'styled-components';
 
 import Main from './container/Main'
 import Menu1 from './container/Menu1'
+import Menu2 from './container/Menu2'
 import Header from './component/Header'
 import Footer from './component/Footer';
 
@@ -22,7 +23,8 @@ function App() {
       <GlobalStyle />
         <Header />
           <Route exact path="/" component={Main} />
-          <Route path="/menu" component={Menu1} />
+          <Route path="/image" component={Menu1} />
+          <Route path="/movie" component={Menu2} />
         <Footer />
         
     </Router>
