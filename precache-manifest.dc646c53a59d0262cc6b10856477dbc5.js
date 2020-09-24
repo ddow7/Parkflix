@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a7238a77807d5b99da978081f881050e",
+    "revision": "b638710a92e148bd45d4e6bc20f169b4",
     "url": "/parkflix/index.html"
   },
   {
-    "revision": "593697b287f2c2def4b0",
+    "revision": "2515d440a34703ec1910",
     "url": "/parkflix/static/css/main.5ecd60fb.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/parkflix/static/js/2.ea5f107d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "593697b287f2c2def4b0",
-    "url": "/parkflix/static/js/main.57e6877e.chunk.js"
+    "revision": "2515d440a34703ec1910",
+    "url": "/parkflix/static/js/main.a8fdb01f.chunk.js"
   },
   {
     "revision": "7cd1c2780c7d403f202d",

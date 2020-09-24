@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/parkflix/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/parkflix/static/js/main.57e6877e.chunk.js",
-    "main.js.map": "/parkflix/static/js/main.57e6877e.chunk.js.map",
+    "main.js": "/parkflix/static/js/main.a8fdb01f.chunk.js",
+    "main.js.map": "/parkflix/static/js/main.a8fdb01f.chunk.js.map",
     "runtime-main.js": "/parkflix/static/js/runtime-main.7ab70af0.js",
     "runtime-main.js.map": "/parkflix/static/js/runtime-main.7ab70af0.js.map",
     "static/js/2.ea5f107d.chunk.js": "/parkflix/static/js/2.ea5f107d.chunk.js",
     "static/js/2.ea5f107d.chunk.js.map": "/parkflix/static/js/2.ea5f107d.chunk.js.map",
     "index.html": "/parkflix/index.html",
-    "precache-manifest.3a409ff166df54d65f64d31182b6acab.js": "/parkflix/precache-manifest.3a409ff166df54d65f64d31182b6acab.js",
+    "precache-manifest.dc646c53a59d0262cc6b10856477dbc5.js": "/parkflix/precache-manifest.dc646c53a59d0262cc6b10856477dbc5.js",
     "service-worker.js": "/parkflix/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/parkflix/static/css/main.5ecd60fb.chunk.css.map",
     "static/js/2.ea5f107d.chunk.js.LICENSE.txt": "/parkflix/static/js/2.ea5f107d.chunk.js.LICENSE.txt",
@@ -38,6 +38,6 @@
     "static/js/runtime-main.7ab70af0.js",
     "static/js/2.ea5f107d.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.57e6877e.chunk.js"
+    "static/js/main.a8fdb01f.chunk.js"
   ]
 }
