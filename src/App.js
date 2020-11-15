@@ -19,14 +19,13 @@ const GlobalStyle = createGlobalStyle`
 function App() {
   return (
     <>
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <GlobalStyle />
         <Header />
-          <Route exact path="/" component={Main} />
+          <Route exact={true} path="/" component={Main} />
           <Route path="/image" component={Menu1} />
           <Route path="/movie" component={Menu2} />
         <Footer />
-        
     </Router>
     </>
   );

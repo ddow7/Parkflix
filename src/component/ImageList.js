@@ -1,6 +1,8 @@
 import React, {Component, useState, useRef} from 'react';
 import styled from 'styled-components';
 
+import ModalPortal from './ModalPortal';
+import ImageModal from './ImageModal';
 import {imageAll} from './ImageContainer';
 
 //썸네일 리스트 제목 스타일
@@ -108,8 +110,7 @@ const ThumbStyle = styled.div`
     overflow: hidden;
     img{
         position:absolute;
-        width : 22vw;
-        top : -50%;
+        width : 100%;
     }
 `;
 
@@ -138,11 +139,21 @@ const RightSlideButtonStyle = styled.div`
 //이미지 출력 함수
 function Image({image}){
 
+    const [modal,setModal] = useState(false);
+
+    const openImageModal = () => {
+        setModal(true);
+    };
+
+    const closeImageModal = () => {
+        setModal(false);
+    };
+
     return (
-        <>
+        <> 
             <ThumbPosStyle>
                 <ThumbCoverStyle>
-                    <ThumbHoverStyle>
+                    <ThumbHoverStyle onClick={openImageModal}>
                         <div>
                             <img src={image.src} alt={image.name} />
                         </div>
@@ -152,6 +163,11 @@ function Image({image}){
                 </ThumbCoverStyle>
             </ThumbPosStyle>
             <ThumbStyle><img src={image.src} alt={image.name} /></ThumbStyle>
+            {modal &&(
+                <ModalPortal>
+                    <ImageModal onClose={closeImageModal} onImage={image}></ImageModal>
+                </ModalPortal>
+            )}
         </>
     );
 }
