@@ -145,7 +145,7 @@ function Image({image}){
         setModal(true);
     };
 
-    const closeImageModal = () => {
+    const closeImageModal = (e) => {
         setModal(false);
     };
 
@@ -157,8 +157,8 @@ function Image({image}){
                         <div>
                             <img src={image.src} alt={image.name} />
                         </div>
-                        <p class="title">{image.name}</p>
-                        <p class="description">{image.description}</p>
+                        <p className="title">{image.name}</p>
+                        <p className="description">{image.description}</p>
                     </ThumbHoverStyle>
                 </ThumbCoverStyle>
             </ThumbPosStyle>

@@ -95,7 +95,7 @@ class Main extends Component{
                         <img src={pauseImg} id="icon" ref="playBtn" onClick={this.pauseVideo}></img>
                         <img src={muteImg} id="icon" ref="soundBtn" onClick={this.soundVideo}></img>
                     </div>
-                    <video ref="vid" autoplay="autoplay" loop muted="muted">
+                    <video ref="vid" autoPlay="autoplay" loop muted="muted">
                         <source src={movie} type="video/mp4" />
                     </video>
                 </MainStyle>
