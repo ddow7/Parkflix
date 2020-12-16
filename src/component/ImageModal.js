@@ -1,6 +1,5 @@
 import React,{useState} from 'react';
 import styled from 'styled-components';
-import close from '../image/icon/close.png'
 
 const Modal = styled.div`
     background: rgba(0, 0, 0, 0.7);
@@ -48,15 +47,6 @@ const Content = styled.div`
         }
       }}
     }
-
-    #button{
-      position : absolute;
-      filter: invert(50%) opacity(1);
-      width : 5vw;
-      height : 5vh;
-      right : 2vw;
-      top : 2vw;
-    }
 `;
 
 const ImageModal = ({onClose, onImage, mod}) => {
@@ -97,7 +87,6 @@ const ImageModal = ({onClose, onImage, mod}) => {
       return (
         <Modal onClick={contentClose}>
           <Content winSize={dimentions} imgSize={imgSize} isOpen={isOpen}>
-            <img src={close} onClick={contentClose} id="button"/>
             <img src={onImage.src} id="img"/>
           </Content>
         </Modal>
