@@ -4,6 +4,10 @@ import styled from 'styled-components';
 import ModalPortal from './ModalPortal';
 import ImageModal from './ImageModal';
 import {imageAll} from './ImageContainer';
+import {videoAll} from './VideoContainer';
+
+import arrowImg from '../image/icon/arrow.png';
+
 
 //썸네일 리스트 제목 스타일
 const TitleStyle = styled.p`
@@ -115,29 +119,62 @@ const ThumbStyle = styled.div`
 `;
 
 const LeftSlideButtonStyle = styled.div`
+    display:flex;
+    justify-content:space-around;
+    align-content:center;
     z-index:4;
-    width : 2vw;
-    height 13vw;
+    width : 3vw;
+    height : 13vw;
     background-color : black;
     position :absolute;
     left : 0;
     border-radius: 0px 5px 5px 0px;
     opacity : 0.6;
+    &:hover{
+        opacity:0.9;
+        img{
+            display:inline;
+            filter: invert(100%) opacity(.9);
+            transform:rotate(180deg);
+            width:100%;
+            object-fit: contain;
+        }
+    }
+
+    img{
+        display:none;
+    }
 `;
 
 const RightSlideButtonStyle = styled.div`
+    display:flex;
+    justify-content:space-around;
+    align-content:center;
     z-index:4;
-    width : 2vw;
-    height 13vw;
+    width : 3vw;
+    height : 13vw;
     background-color : black;
     position :absolute;
     right : 0;
     border-radius: 5px 0px 0px 5px;
     opacity : 0.6;
+    &:hover{
+        opacity:0.9;
+        img{
+            display:inline;
+            filter: invert(100%) opacity(.9);
+            width:100%;
+            object-fit: contain;
+        }
+    }
+
+    img{
+        display:none;
+    }
 `;
 
 //이미지 출력 함수
-function Image({image}){
+function Image({mod, image}){
 
     const [modal,setModal] = useState(false);
 
@@ -165,7 +202,7 @@ function Image({image}){
             <ThumbStyle><img src={image.src} alt={image.name} /></ThumbStyle>
             {modal &&(
                 <ModalPortal>
-                    <ImageModal onClose={closeImageModal} onImage={image}></ImageModal>
+                    <ImageModal onClose={closeImageModal} onImage={image} mod={mod}></ImageModal>
                 </ModalPortal>
             )}
         </>
@@ -173,9 +210,17 @@ function Image({image}){
 }
 
 //이미지 리스트 리턴
-function ImageList({numb, title}){
+function ImageList({mod, numb, title}){
 
-    let images = imageAll[Number(numb)-1];
+    let images;
+
+    switch(mod){
+        case "img":
+            images = imageAll[Number(numb)-1];
+            break;
+        case "vid":
+            images = videoAll[Number(numb)-1];
+    }
 
     let pageMax = images.length / 4;
 
@@ -199,11 +244,11 @@ function ImageList({numb, title}){
         <>
             <TitleStyle>{title}</TitleStyle>
             <ThumbListStyle page={page} ref={listInput}>
-            <LeftSlideButtonStyle onClick={leftPage}></LeftSlideButtonStyle>
-            <RightSlideButtonStyle onClick={rightPage}></RightSlideButtonStyle>
+            <LeftSlideButtonStyle onClick={leftPage}><img src={arrowImg} /></LeftSlideButtonStyle>
+            <RightSlideButtonStyle onClick={rightPage}><img src={arrowImg} /></RightSlideButtonStyle>
                 {
                     images.map(image => (
-                        <Image image={image} />
+                        <Image mod={mod} image={image} />
                     ))
                 }
             </ThumbListStyle>

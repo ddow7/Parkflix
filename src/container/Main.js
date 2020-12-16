@@ -2,7 +2,7 @@
 import React, {Component, useState} from 'react';
 import styled from 'styled-components';
 
-import movie from '../image/movie/mainMovie.mp4';
+import movie from '../image/movie/movie1.mp4';
 import ImageList from '../component/ImageList';
 
 import playImg from '../image/icon/play.png';
@@ -99,9 +99,10 @@ class Main extends Component{
                         <source src={movie} type="video/mp4" />
                     </video>
                 </MainStyle>
-                <ImageList numb="1" title="애기 상혁"/>
-                <ImageList numb="2" title="셀카 상혁"/>
-                <ImageList numb="3" title="웃겨 상혁"/>
+                <ImageList mod="img" numb="1" title="애기 상혁"/>
+                <ImageList mod="img" numb="2" title="셀카 상혁"/>
+                <ImageList mod="img" numb="3" title="웃겨 상혁"/>
+                <ImageList mod="vid" numb="2" title="비디오 상혁"/>
             </>
         )
     }

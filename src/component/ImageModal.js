@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import styled from 'styled-components';
+import close from '../image/icon/close.png'
 
 const Modal = styled.div`
     background: rgba(0, 0, 0, 0.7);
@@ -19,13 +20,15 @@ const Content = styled.div`
     background: rgba(0, 0, 0, 0.7);
     padding: 1rem;
     display: flex;
+    position : relative;
     align-items: center;
     justify-content: center;
+    flex-direction : column;
     z-index : 11;
     transition: all ease 0.5s;
     border-radius: 20px 20px 20px 20px;
 
-    img{
+    #img{
       width : 0px;
       height : 0px;
       ${props => {
@@ -45,9 +48,18 @@ const Content = styled.div`
         }
       }}
     }
+
+    #button{
+      position : absolute;
+      filter: invert(50%) opacity(1);
+      width : 5vw;
+      height : 5vh;
+      right : 2vw;
+      top : 2vw;
+    }
 `;
 
-const ImageModal = ({onClose, onImage}) => {
+const ImageModal = ({onClose, onImage, mod}) => {
 
   const [isOpen,setIsOpen] = React.useState(true);
   const [dimentions,setDemensions] = React.useState({
@@ -80,13 +92,29 @@ const ImageModal = ({onClose, onImage}) => {
     onClose();
   }
 
-  return (
-    <Modal onClick={contentClose}>
-      <Content winSize={dimentions} imgSize={imgSize} isOpen={isOpen}>
-        <img src={onImage.src} id="img" />
-      </Content>
-    </Modal>
-  );
+  switch(mod){
+    case "img":
+      return (
+        <Modal onClick={contentClose}>
+          <Content winSize={dimentions} imgSize={imgSize} isOpen={isOpen}>
+            <img src={close} onClick={contentClose} id="button"/>
+            <img src={onImage.src} id="img"/>
+          </Content>
+        </Modal>
+      );
+        break;
+    case "vid":
+      return (
+        <Modal onClick={contentClose}>
+          <Content winSize={dimentions} imgSize={imgSize} isOpen={isOpen}>
+            <video autoPlay="autoplay" loop muted="muted" id="img" controls="controls">
+                <source src={onImage.vidsrc} type="video/mp4" />
+            </video>
+          </Content>
+        </Modal>
+      );
+        break;
+  }
 };
 
 export default ImageModal;
