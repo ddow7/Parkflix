@@ -11,19 +11,19 @@ const MainStyle = styled.div`
     position : relative;
 `;
 
-class Main extends Component{
+class Menu1 extends Component{
     render(){
         return (
             <>
                 <MainStyle>
-                    Something
+                    <br />
                 </MainStyle>
-                <ImageList numb="1" title="애기 상혁"/>
-                <ImageList numb="2" title="셀카 상혁"/>
-                <ImageList numb="3" title="웃겨 상혁"/>
+                <ImageList mod="img" numb="1"/>
+                <ImageList mod="img" numb="2"/>
+                <ImageList mod="img" numb="3"/>
             </>
         )
     }
 }
 
-export default Main;
+export default Menu1;

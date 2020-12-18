@@ -208,9 +208,8 @@ function Image({mod, image}){
         </>
     );
 }
-
 //이미지 리스트 리턴
-function ImageList({mod, numb, title}){
+function ImageList({mod, numb}){
 
     let images;
 
@@ -220,6 +219,7 @@ function ImageList({mod, numb, title}){
             break;
         case "vid":
             images = videoAll[Number(numb)-1];
+            break;
     }
 
     let pageMax = images.length / 4;
@@ -242,7 +242,7 @@ function ImageList({mod, numb, title}){
     
     return (
         <>
-            <TitleStyle>{title}</TitleStyle>
+            <TitleStyle>{images[0].title}</TitleStyle>
             <ThumbListStyle page={page} ref={listInput}>
             <LeftSlideButtonStyle onClick={leftPage}><img src={arrowImg} /></LeftSlideButtonStyle>
             <RightSlideButtonStyle onClick={rightPage}><img src={arrowImg} /></RightSlideButtonStyle>

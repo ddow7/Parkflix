@@ -5,21 +5,8 @@ import thumb2 from '../image/movie/thumb2.jpg'
 
 export const video1=[
     {
+        title:'일상영상혁',
         id:1,
-        name:'수영장에서 상혁',
-        src:thumb1,
-        vidsrc:vid1,
-        description:"수영장에서 친구들과 놀았던 추억...",
-    },
-    {
-        id:2,
-        name:'수영장에서 상혁',
-        src:thumb1,
-        vidsrc:vid1,
-        description:"수영장에서 친구들과 놀았던 추억...",
-    },
-    {
-        id:3,
         name:'수영장에서 상혁',
         src:thumb1,
         vidsrc:vid1,
@@ -29,11 +16,12 @@ export const video1=[
 
 export const video2=[
     {
+        title:'웃긴영상혁',
         id:2,
-        name:'222',
+        name:'정력왕 상혁2',
         src:thumb2,
         vidsrc:vid2,
-        description:"수영장에서 친구들과 놀았던 추억...",
+        description:"가루지기",
     },
 ];
 

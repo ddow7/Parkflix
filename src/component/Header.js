@@ -16,6 +16,7 @@ const HeaderStyle = styled.div`
     z-index:10;
 `;
 
+
 //로고 스타일
 const LogoStyle = styled.img`
     margin: 2vw;
@@ -24,10 +25,12 @@ const LogoStyle = styled.img`
 
 function Header(){
     return (
+        <>
         <HeaderStyle>
             <Link to='/'><LogoStyle src={logo} /></Link>  { /* 로고 */ }
             <Menu />  { /* 메뉴 */ }
         </HeaderStyle>
+        </>
     );
 }
 

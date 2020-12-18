@@ -23,6 +23,7 @@ import fun4 from '../image/fun/fun4.jpg';
 
 export const image1=[
     {
+        title:'애기 상혁',
         id:1,
         name:'웅변 상혁',
         src:baby1,
@@ -74,6 +75,7 @@ export const image1=[
 
 export const image2=[
     {
+        title:'셀카 상혁',
         id:1,
         name:'웃는 상혁',
         src:self1,
@@ -83,7 +85,7 @@ export const image2=[
         id:2,
         name:'할배옷 상혁',
         src:self2,
-        description:"옷이 할배옷이다"
+        description:"옷이 할아버지 옷이다"
     },
     {
         id:3,
@@ -126,6 +128,7 @@ export const image2=[
 
 export const image3=[
     {
+        title:'웃겨 상혁',
         id:1,
         name:'마스크 작아 상혁',
         src:fun1,
